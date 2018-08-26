@@ -1,0 +1,9 @@
+---
+- name: install git_latest_version
+  hosts: all
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: "Install git"
+      package: name=git state=absent
