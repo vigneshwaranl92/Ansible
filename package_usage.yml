@@ -1,0 +1,10 @@
+---
+- name: "example of package usage"
+  hosts: all
+  become_user: root
+  gather_facts: true
+  tasks:
+   - name: "how to use command package"
+     command: cd /root/Ansible && mkdir dummy
+   - name: "how to use copy package"
+     copy: src=/root/Ansible/dummy dest=/root/Ansible/dummy1
